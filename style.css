@@ -1,0 +1,168 @@
+.btn {
+  position:relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration:none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  
+ }
+ 
+ .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn::after {
+  background-color:orange;
+ }
+ 
+ .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }
+.navbar{
+  position:sticky;
+  z-index: 1000;
+ 
+}
+.row{
+   display: flex;
+  text-align: center;
+ 
+}
+.row{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+.row {
+  display: flex;
+  justify-content: center;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  body{
+    background: white;
+  }
+  @keyframes slide {
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+    
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background:white;
+    white-space: nowrap;
+    position:relative;
+  }
+  .logos:hover .logos-slide{
+    animation-play-state: paused;
+  }
+  .logos-slide {
+    display: inline-block;
+    animation: 10s slide infinite linear;
+    
+  }
+  .logos-slide img{
+    height: 120px;
+    margin: 0 40px;
+  }
+  .logos:before,
+  .logos:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+
+  }
+  .logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba( 255 255 255 0) white);
+   
+  }
+  .logos::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255 255 255 0 ) white);
+  }
+  .parent.container-fluid{
+    justify-content:center;
+    padding: 0;
+    list-style-type:none;
+    display: flex;
+    margin-bottom: 10%;
+    
+  }
+  .h1{
+    background-color: orange;
+    border-radius: 35px;
+    font-style:unset;
+    
+  }
+  /* Basic styling for the images */
+.animate {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-20px); /* Start slightly to the left */
+  animation: slideIn 1.0s forwards; /* Apply animation */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  to {
+      opacity: 1; /* Fade in */
+      transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Optional: Stagger the animation delay for each item */
+.animate:nth-child(1) { animation-delay: 0.2s; }
+.animate:nth-child(2) { animation-delay: 0.4s; }
+.animate:nth-child(3) { animation-delay: 0.6s; }
+.animate:nth-child(4) { animation-delay: 0.8s; }
+.animate:nth-child(5) { animation-delay: 1.0s; }
+.animate:nth-child(6) { animation-delay: 1.2s; }
+.animate:nth-child(7) { animation-delay: 1.4s; }
+.animate:nth-child(8) { animation-delay: 1.6s; }
+.animate:nth-child(9) { animation-delay: 1.8s; }
+.animate:nth-child(10) { animation-delay: 2.0s; }
+.animate:nth-child(11) { animation-delay: 2.2s; }
